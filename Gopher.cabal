@@ -1,0 +1,20 @@
+name:                Gopher
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     Gopher
+  build-depends:       base
+  hs-source-dirs:      lib
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+  extra-libraries:     gopher
+  include-dirs:        .
+
+executable gopher
+  main-is:             Main.hs
+  build-depends:       base, Gopher
+  hs-source-dirs:      app
+  default-language:    Haskell2010
+  ghc-options:         -Wall
